@@ -1,9 +1,9 @@
-name: Deployment Project 2
+name: Deployment Exercise 2
 on: push
 jobs:
   lint:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
@@ -13,7 +13,7 @@ jobs:
   test:
     needs: lint
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
@@ -31,4 +31,4 @@ jobs:
       - name: Build code
         run: npm run build
       - name: Deploy code
-        run: echo "Deploying...."
+        run: echo "Deploying..."
